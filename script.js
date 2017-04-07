@@ -1,28 +1,56 @@
-// Select all HTML elements with a class of "box".
 var boxes = document.querySelectorAll(".box");
+var leftMargin1 = 0;
+var leftMargin2 = 0;
+var leftMargin3 = 0;
+var leftMargin4 = 0;
+var leftMargin5 = 0;
 
-// For the 1st box (index = 0), change the background color to "blue".
-boxes[0].style.backgroundColor = "blue";
+boxes[0].addEventListener("click", boxClickedA);
+boxes[1].addEventListener("click", boxClickedB);
+boxes[2].addEventListener("click", boxClickedC);
+boxes[3].addEventListener("dblclick", boxClickedD);
+boxes[4].addEventListener("click", boxClickedE);
 
-// For the 3rd box (index = 2), change the background color to "yellow".
-boxes[2].style.backgroundColor = "yellow";
+boxes[0].style.backgroundColor = "green";
 
-// Variable to hold the current left margin.
-var leftMargin = 0;
-
-// Variable used to add to the left margin.
-var moveAmount = 20;
-
-// Function that adds moveAmount to leftMargin then appends leftMargin
-// to the first box's margin left. Basically moving the box to the right.
-function boxClicked() {
-
-    // 'console.log()' only displays in the browser console.
-    // It's useful for you, the developer, to debug your code.
+function boxClickedA() {
     console.log("Hey, box clicked!");
-    leftMargin += moveAmount;
-    boxes[0].style.marginLeft = leftMargin + "px";
+    leftMargin1 += 5;
+    boxes[0].style.marginLeft = leftMargin1 + "px";
 }
 
-// When anyone clicks on the first box, call the function "boxClicked".
-boxes[0].addEventListener("click", boxClicked);
+
+boxes[1].style.backgroundColor = "purple";
+
+function boxClickedB() {
+    console.log("Hey, box clicked!");
+    leftMargin2 += 10;
+    boxes[1].style.marginLeft = leftMargin2 + "px";
+}
+
+
+boxes[2].style.backgroundColor = "#191919";
+
+function boxClickedC() {
+    console.log("Hey, box clicked!");
+    leftMargin3 += 15;
+    boxes[2].style.marginLeft = leftMargin3 + "px";
+}
+
+
+boxes[3].style.backgroundColor = "blanchedalmond";
+
+function boxClickedD() {
+    console.log("Hey, box clicked!");
+    leftMargin4 += 20;
+    boxes[3].style.marginLeft = leftMargin4 + "px";
+}
+
+
+function boxClickedE() {
+    console.log("Hey, box clicked!");
+    leftMargin5 += 25;
+    boxes[4].style.marginTop = leftMargin5 + "px";
+}
+
+
